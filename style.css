@@ -29,17 +29,15 @@ form input {
 }
 
 svg {
-  width: 24px;
-  height: 24px;
-}
-
-svg:first-of-type {
-  width: 20px;
-  height: 20px;
-}
-
-svg:nth-child(2) {
+  width: 28px;
+  height: 28px;
   cursor: pointer;
+  margin: 0 0.3rem;
+}
+
+#nav-cross {
+  padding-right: 0.5rem;
+  border-right: 3px solid rgb(226, 222, 222);
 }
 
 .popup {
