@@ -33,5 +33,4 @@ const svgColor= [
     document.querySelector('svg:nth-child(2)').addEventListener('mouseout', ()=>{
         microPopup.style.opacity=0
     })
-    
-    
+

@@ -16,6 +16,19 @@ li {
   cursor: pointer;
 }
 
+a {
+  color: #202124;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:active {
+  color: #609;
+}
+
 /* HEADER */
 
 header {
@@ -114,4 +127,42 @@ header svg {
   grid-area: choices;
   display: flex;
   justify-content: space-between;
+}
+
+/* MAIN PAGE */
+
+main {
+  margin-left: 10rem;
+  width: 65%;
+}
+
+main h3 {
+  color: #1a0dab;
+  font-weight: normal;
+  font-size: 1.45rem;
+  margin: 0.6rem 0;
+}
+
+main p {
+  margin: 0 0 2rem;
+}
+
+main #result-number {
+  color: #70757a;
+  margin-top: 1rem;
+}
+
+.first-result {
+  margin-top: 2rem;
+}
+
+/* VIDEOS */
+
+.fa-caret-square-right {
+  margin-right: 1rem;
+  color: #70757a;
+}
+
+.video > h3 {
+  color: #202124;
 }
