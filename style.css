@@ -163,6 +163,16 @@ main #result-number {
   color: #70757a;
 }
 
-.video > h3 {
+.first-result + h3 {
   color: #202124;
+}
+
+.video {
+  border: 2px solid rgb(226, 222, 222);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+iframe {
+  border-radius: 8px;
 }
