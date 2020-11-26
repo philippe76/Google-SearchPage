@@ -1,7 +1,19 @@
-form {
+/* MAIN STYLES */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: arial, sans-serif;
+}
+
+ul {
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-left: 0;
+}
+
+li {
+  cursor: pointer;
 }
 
 /* HEADER */
@@ -12,6 +24,7 @@ header {
   grid-template-columns: 10rem auto 10rem;
   grid-template-areas: "google search account";
   align-items: center;
+  margin-bottom: 0;
 }
 
 img[alt="google-logo"] {
@@ -21,7 +34,13 @@ img[alt="google-logo"] {
   cursor: pointer;
 }
 
-form input {
+header form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header form input {
   border: none;
   outline: none;
   margin-left: 1rem;
@@ -46,7 +65,7 @@ form input {
   border-color: rgba(223, 225, 229, 0);
 }
 
-svg {
+header svg {
   width: 28px;
   height: 28px;
   cursor: pointer;
@@ -60,14 +79,8 @@ svg {
 
 .navbar-right {
   grid-area: account;
-  display: flex;
   justify-content: flex-end;
   align-items: center;
-  list-style: none;
-}
-
-.navbar-right li {
-  cursor: pointer;
 }
 
 .popup {
@@ -79,6 +92,26 @@ svg {
   color: white;
   font-size: 0.8rem;
   padding: 0.6rem 0.2rem 0;
-  left: 65%;
-  top: 51%;
+  /* left: 65%;
+  top: 51%; */
+}
+
+/* MAIN SEARCH */
+
+.main-search {
+  display: grid;
+  grid-template-columns: 10rem auto 10rem;
+  grid-template-areas: ". choices";
+  border-bottom: 2px solid rgb(226, 222, 222);
+  color: #5f6368;
+}
+
+.main-search li {
+  margin: 0 0.7rem;
+}
+
+.search-choice {
+  grid-area: choices;
+  display: flex;
+  justify-content: space-between;
 }
