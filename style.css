@@ -25,9 +25,9 @@ a:hover {
   cursor: pointer;
 }
 
-a:active {
+/* a:active {
   color: #609;
-}
+} */
 
 /* HEADER */
 
@@ -78,7 +78,7 @@ header form input {
   border-color: rgba(223, 225, 229, 0);
 }
 
-header svg {
+svg {
   width: 28px;
   height: 28px;
   cursor: pointer;
@@ -119,14 +119,33 @@ header svg {
   color: #5f6368;
 }
 
+.main-search ul {
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.main-search svg {
+  height: 1.3rem;
+}
+
 .main-search li {
   margin: 0 0.7rem;
+  padding-bottom: 0.6rem;
+}
+
+.main-search li[class="choice-active"] {
+  padding-bottom: 0.35rem;
 }
 
 .search-choice {
   grid-area: choices;
   display: flex;
   justify-content: space-between;
+}
+
+.choice-active {
+  border-bottom: 4px solid #1a73e8;
+  color: #1a73e8;
 }
 
 /* MAIN PAGE */
@@ -176,3 +195,7 @@ main #result-number {
 iframe {
   border-radius: 8px;
 }
+
+/* .search-choice > ul > li {
+  color: red;
+} */
