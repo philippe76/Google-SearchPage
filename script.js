@@ -42,13 +42,13 @@ document.querySelector('svg:nth-child(2)').addEventListener('mouseout', ()=> {
 
 
 // GIVE OR REMOVE ACTIVE CLASS
-document.querySelectorAll('.search-choice > ul > li').forEach( item => {
+document.querySelectorAll('.search-choice > ul:first-of-type > li').forEach( item => {
     item.addEventListener('mouseover', (e)=> {
        item.classList.add('choice-active')
     })
 })
 
-document.querySelectorAll('.search-choice > ul > li').forEach( item => {
+document.querySelectorAll('.search-choice > ul:first-of-type > li').forEach( item => {
     item.addEventListener('mouseout', (e)=> {
        item.classList.remove('choice-active')
     })
