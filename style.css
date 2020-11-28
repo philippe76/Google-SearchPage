@@ -33,7 +33,18 @@ a:visited {
   color: #609;
 }
 
+.scroll-shadow {
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  /* border-color: rgba(223, 225, 229, 0); */
+}
+
 /* HEADER */
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
 
 header {
   margin: 1.6rem 1rem;
@@ -114,6 +125,10 @@ svg {
 }
 
 /* MAIN SEARCH */
+
+/* main {
+  position: relative;
+} */
 
 .main-search {
   display: grid;

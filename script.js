@@ -41,7 +41,7 @@ document.querySelector('svg:nth-child(2)').addEventListener('mouseout', ()=> {
 })
 
 
-// GIVE OR REMOVE ACTIVE CLASS
+// ADD OR REMOVE LINK ACTIVE CLASS
 document.querySelectorAll('.search-choice > ul:first-of-type > li').forEach( item => {
     item.addEventListener('mouseover', (e)=> {
        item.classList.add('choice-active')
@@ -54,3 +54,13 @@ document.querySelectorAll('.search-choice > ul:first-of-type > li').forEach( ite
     })
 })
 
+
+// ADD NAV BOX-SHADOW WHEN SCROLLING
+let nav = document.querySelector('nav');
+
+window.addEventListener("scroll", () => {
+    nav.classList.add('scroll-shadow');
+    if (window.scrollY === 0 ) {
+        nav.classList.remove('scroll-shadow');
+    }
+})
