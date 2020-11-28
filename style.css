@@ -27,6 +27,7 @@ a {
 
 a:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 a:visited {
@@ -123,7 +124,7 @@ svg {
   top: 51%; */
 }
 
-/* MAIN SEARCH */
+/* SEARCH */
 
 .main-search {
   display: grid;
@@ -163,7 +164,7 @@ svg {
   color: #1a73e8;
 }
 
-/* MAIN PAGE */
+/* MAIN  */
 
 main {
   margin-left: 10rem;
@@ -236,4 +237,73 @@ h5 {
 
 .video-info p {
   margin: 0.8rem 0;
+}
+
+/* PEOPLE ASK  */
+
+.people-ask {
+  border: 2px solid rgb(226, 222, 222);
+  border-radius: 8px;
+}
+
+.people-ask h3,
+.people-ask p {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 1rem;
+  border-bottom: 2px solid rgb(226, 222, 222);
+}
+
+.people-ask p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* BUILD IMAGES */
+
+.fa-image {
+  margin-right: 1rem;
+  color: #70757a;
+  font-size: 1.5rem;
+}
+
+.build-image li {
+  border-radius: 40px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  padding: 0.7rem;
+  margin: 0 0.2rem;
+}
+
+.build-image img {
+  width: 7rem;
+  height: 8rem;
+}
+
+/* ALSO SEARCH */
+
+.also-search {
+  border: 2px solid rgb(226, 222, 222);
+  border-radius: 8px;
+}
+
+.also-search p {
+  margin: 0.5rem 0;
+}
+
+.also-search > p {
+  margin: 1.5rem;
+}
+
+.search-card {
+  display: flex;
+  justify-content: center;
+}
+
+.search-card div {
+  border: 2px solid rgb(226, 222, 222);
+  border-radius: 8px;
+  margin: 0.3rem;
+  width: 7rem;
+  height: 9.5rem;
+  text-align: center;
+  padding: 0.1rem;
 }
