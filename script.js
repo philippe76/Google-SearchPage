@@ -64,3 +64,48 @@ window.addEventListener("scroll", () => {
         nav.classList.remove('scroll-shadow');
     }
 })
+
+
+// FILL RESULT AREAS
+let result_subtitle = [...document.querySelectorAll('.result h5')];
+let result_link = [...document.querySelectorAll('.result a')];
+let result_title = [...document.querySelectorAll('.result h3')];
+let result_para = [...document.querySelectorAll('.result p')];
+
+let result_content = [
+    {
+        sub: '<strong>Ad·</strong> www.wix.com/build-website-for-free',
+        href: 'https://www.wix.com/',
+        title: 'Build a Webpage for Free - wix.com',
+        para: 'Make Professional <strong>Webpages</strong> for Free Fast & Easy Free <strong>Website</strong> Builder! Customizable online store. Custom domain name. Free multilingual fonts. 100s of templates. Customizable templates. Market leaders. 100s of Apps. 1000s of free images. Social media compatible.'
+    },    
+    {
+        sub: 'anutka777.github.io › google-search-results',
+        href: 'https://anutka777.github.io/google-searchresult-page/',
+        title: 'build this webpage - GitHub Pages',
+        para: '<strong>build this webpage</strong>. https://anutka777.github.io/google-results/. With zero coding experience, artist building 180 webpages in 180 days ...'
+    },
+    {
+        sub: 'mohammedsobhi.github.io/google_replica_2',
+        href: 'https://mohammedsobhi.github.io/google-search_page/',
+        title: 'build this webpage - GitHub Pages',
+        para: 'With zero coding experience, artist <strong>building</strong> 180 webpages . ... days ago, having never done any programming in her life, Jennifer Dewalt built her first <strong>webpage</strong>.'
+    },
+]
+
+for (let i=0; i<3; i++) {
+    result_subtitle[i].innerHTML = `${result_content[i].sub} <i class="fas fa-caret-down"></i>`;
+}
+
+for (let i=0; i<3; i++) {
+    result_link[i].setAttribute('href', result_content[i].href)
+}
+
+for (let i=0; i<3; i++) {
+    result_title[i].innerHTML += result_content[i].title
+}
+
+for (let i=0; i<3; i++) {
+    result_para[i].innerHTML = result_content[i].para
+}
+
