@@ -19,6 +19,7 @@ const svgColor= [
     '#5f6368',
     '#1a0dab',
     '#1a0dab',
+    '#70757a',
     '#1a0dab'
 ]
     
@@ -147,14 +148,32 @@ for (let i=0; i<result_content.length; i++) {
 
 
 
-
+// FILL GOOOOOGLE SPANS
 for (let i=1; i<=10; i++){
     let span = document.createElement('span');
-    span.style.padding = '0 0.4rem'
-    document.querySelector('.google-numb').appendChild(span).innerHTML = i
+    span.style.padding = '0 0.4rem';
+    document.querySelector('.google-numb').appendChild(span).innerHTML = i;
 }
 
 let next = document.createElement('span');
 next.innerHTML = 'Next';
-next.style.marginLeft = '2rem'
-document.querySelector('.google-numb').appendChild(next)
+next.style.marginLeft = '2rem';
+document.querySelector('.google-numb').appendChild(next);
+
+
+// PEOPLE SEARCH DROPDOWN
+
+document.querySelector('.search-drop').addEventListener('click', () => {
+    if (document.querySelector('.search-card').style.display !== 'none'){
+        document.querySelector('.search-card').style.display = 'none';
+        document.querySelector('.search-drop > img').style.display = 'inline-block';
+        document.querySelector('.search-drop p').style.marginRight = 'auto';
+        document.querySelector('.search-drop svg').style.transform= 'scale3d(1, -1, 1)'
+    }
+    else {
+        document.querySelector('.search-card').style.display = 'flex';
+        document.querySelector('.search-drop > img').style.display = 'none';
+        document.querySelector('.search-drop svg').style.transform= 'scale3d(1, 1, 1)'
+    }
+    
+})
