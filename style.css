@@ -377,6 +377,63 @@ h5 {
   text-decoration: none;
 }
 
+/******** RELATED SEARCH *********/
+
+.related-search {
+  display: flex;
+}
+
+.related-search div {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.related-search a {
+  color: #1a0dab;
+  font-weight: 600;
+  padding: 0.4rem 0;
+}
+
+.related-search a:hover {
+  text-decoration: none;
+}
+
+/******** GOOOOGLE *********/
+
+.gooogle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.gooogle span {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  color: #4285f4;
+}
+
+.google-numb {
+  width: 40%;
+  margin: 0.1rem auto;
+  text-align: center;
+  color: #4285f4;
+  margin-bottom: 2rem;
+}
+
+.google-numb span:first-child {
+  color: black;
+}
+
+.google-numb span:hover {
+  text-decoration: underline;
+}
+
+.google-numb span:first-child:hover {
+  text-decoration: none;
+}
+
 /******** FOOTER *********/
 
 footer {
