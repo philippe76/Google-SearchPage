@@ -27,11 +27,8 @@ a {
 
 a:hover {
   cursor: pointer;
+  color: #1a0dab;
   text-decoration: underline;
-}
-
-a:visited {
-  color: #609;
 }
 
 .scroll-shadow {
@@ -160,6 +157,10 @@ svg {
   justify-content: space-between;
 }
 
+.search-choice a:hover {
+  text-decoration: none;
+}
+
 .choice-active {
   border-bottom: 4px solid #1a73e8;
   color: #1a73e8;
@@ -268,6 +269,10 @@ h5 {
 .view-all p {
   margin: 0 auto;
   padding: 0;
+}
+
+.video a:last-child:hover {
+  text-decoration: none;
 }
 
 /******** PEOPLE ASK *********/
