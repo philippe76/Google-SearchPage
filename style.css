@@ -113,13 +113,23 @@ svg {
   width: 6rem;
   height: 1.6rem;
   background-color: black;
+  text-align: center;
   position: absolute;
   display: inline-block;
   color: white;
   font-size: 0.8rem;
   padding: 0.6rem 0.2rem 0;
-  /* left: 65%;
-  top: 51%; */
+  left: 53%;
+  top: 51%;
+}
+
+.navbar-right svg {
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+
+.navbar-right svg:hover {
+  background-color: rgb(233, 230, 230);
 }
 
 /******** SEARCH *********/
@@ -451,6 +461,7 @@ h5 {
 
 .google-numb span:first-child {
   color: black;
+  cursor: default !important;
 }
 
 .google-numb span:hover {

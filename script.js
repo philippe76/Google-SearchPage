@@ -30,10 +30,27 @@ document.querySelectorAll('path').forEach(item => {
 })
 
 
-// ANIMATE POP-UPS
+// CROSS POP-UP
+let crossPopup = document.createElement('div');
+crossPopup.classList.add('popup');
+crossPopup.innerText = 'Clear'
+
+document.querySelector('#nav-cross').addEventListener('mouseover', ()=> {
+    crossPopup.style.opacity=1;
+    crossPopup.style.left = "51%";
+    crossPopup.style.width = "2.5rem";
+
+    document.querySelector('.search-bar').append(crossPopup);
+})
+
+document.querySelector('#nav-cross').addEventListener('mouseout', ()=> {
+    crossPopup.style.opacity=0
+})
+
+// MICRO POP-UP
 let microPopup = document.createElement('div');
 microPopup.classList.add('popup'); 
-microPopup.innerText ='Search by voice';
+microPopup.innerText = 'Search by voice';
 
 document.querySelector('svg:nth-child(2)').addEventListener('mouseover', ()=> {
     microPopup.style.opacity=1;
@@ -44,6 +61,39 @@ document.querySelector('svg:nth-child(2)').addEventListener('mouseout', ()=> {
     microPopup.style.opacity=0
 })
 
+// APPS POP-UP
+let appPopup = document.createElement('div');
+appPopup.classList.add('popup');
+appPopup.innerText = 'Google apps'
+
+document.querySelector('.navbar-right svg').addEventListener('mouseover', ()=> {
+        appPopup.style.opacity=1;
+        appPopup.style.left= '93%';
+        appPopup.style.background = '#5f6368';
+        appPopup.style.borderRadius = '8px'
+        document.querySelector('.search-bar').append(appPopup);
+})
+
+document.querySelector('.navbar-right svg').addEventListener('mouseout', ()=> {
+    appPopup.style.opacity=0
+})
+
+// ACCOUNT POP-UP
+let accountPopup = document.createElement('div');
+accountPopup.classList.add('popup');
+accountPopup.innerText = 'Google Account'
+
+document.querySelector('#odin-logo').addEventListener('mouseover', ()=> {
+    accountPopup.style.opacity=1;
+    accountPopup.style.left= '95%';
+    accountPopup.style.background = '#5f6368';
+    accountPopup.style.borderRadius = '8px'
+        document.querySelector('.search-bar').append(accountPopup);
+})
+
+document.querySelector('#odin-logo').addEventListener('mouseout', ()=> {
+    accountPopup.style.opacity=0
+})
 
 // ADD OR REMOVE LINK ACTIVE CLASS
 document.querySelectorAll('.search-choice > ul:first-of-type > li').forEach( item => {
@@ -152,12 +202,14 @@ for (let i=0; i<result_content.length; i++) {
 for (let i=1; i<=10; i++){
     let span = document.createElement('span');
     span.style.padding = '0 0.4rem';
+    span.style.cursor = "pointer"
     document.querySelector('.google-numb').appendChild(span).innerHTML = i;
 }
 
 let next = document.createElement('span');
 next.innerHTML = 'Next';
 next.style.marginLeft = '2rem';
+next.style.cursor = "pointer";
 document.querySelector('.google-numb').appendChild(next);
 
 
