@@ -386,7 +386,7 @@ footer {
 }
 
 footer p,
-ul {
+footer ul {
   border-top: solid 1px #dadce0;
   padding: 0.8rem 10rem;
   margin: 0;
