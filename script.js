@@ -17,6 +17,7 @@ const svgColor= [
     '#5f6368',
     '#5f6368',
     '#5f6368',
+    '#1a0dab'
 ]
     
 let count = 0;
