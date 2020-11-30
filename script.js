@@ -1,4 +1,14 @@
 
+// ADD NAV BOX-SHADOW WHEN SCROLLING
+let nav = document.querySelector('nav');
+
+window.addEventListener("scroll", () => {
+    nav.classList.add('scroll-shadow');
+    if (window.scrollY === 0 ) {
+        nav.classList.remove('scroll-shadow');
+    }
+})
+
 // FILL SVG WITH COLORS
 const svgColor= [
     '#80868b',
@@ -18,6 +28,7 @@ const svgColor= [
     '#5f6368',
     '#5f6368',
     '#1a0dab',
+    '#70757a',
     '#1a0dab',
     '#70757a',
     '#1a0dab'
@@ -109,17 +120,6 @@ document.querySelectorAll('.search-choice > ul:first-of-type > li').forEach( ite
 })
 
 
-// ADD NAV BOX-SHADOW WHEN SCROLLING
-let nav = document.querySelector('nav');
-
-window.addEventListener("scroll", () => {
-    nav.classList.add('scroll-shadow');
-    if (window.scrollY === 0 ) {
-        nav.classList.remove('scroll-shadow');
-    }
-})
-
-
 // FILL RESULT AREAS HTML
 let result_subtitle = [...document.querySelectorAll('.result h5')];
 let result_link = [...document.querySelectorAll('.result a')];
@@ -197,24 +197,61 @@ for (let i=0; i<result_content.length; i++) {
 }
 
 
+// IMAGES SLIDER
+document.querySelector('#slider-svg').addEventListener('mouseover', ()=> {
+    document.querySelector('#slider-svg > path').style.fill = "black"
+})
 
-// FILL GOOOOOGLE SPANS
-for (let i=1; i<=10; i++){
-    let span = document.createElement('span');
-    span.style.padding = '0 0.4rem';
-    span.style.cursor = "pointer"
-    document.querySelector('.google-numb').appendChild(span).innerHTML = i;
-}
+document.querySelector('#slider-svg').addEventListener('mouseout', ()=> {
+    document.querySelector('#slider-svg > path').style.fill = "#70757a"
+})
 
-let next = document.createElement('span');
-next.innerHTML = 'Next';
-next.style.marginLeft = '2rem';
-next.style.cursor = "pointer";
-document.querySelector('.google-numb').appendChild(next);
+
+let images = [1,2,3,4,5,6,7]
+
+images.forEach(item => {
+    let slideImg = document.createElement('img');
+    slideImg.setAttribute('src', `img/build${item}.jpg`);
+    document.querySelector('.slider').appendChild(slideImg);
+})
+
+// document.querySelector('#slider-svg').addEventListener('click', ()=> {
+    // console.log(images[0]);
+    // if (images[0] === 1){
+    //     document.querySelector('.slider').innerHTML ='';
+    //     for (let i=1; i<images.length; i++){
+    //         images.splice(0,1);
+    //         images.push(i);
+    //         images.forEach(item => {
+    //             let slideImg = document.createElement('img');
+    //             slideImg.setAttribute('src', `img/build${item}.jpg`);
+    //             document.querySelector('.slider').appendChild(slideImg);
+    //         })
+    //         console.log(images);
+    //     }    
+    // }   
+    // else {
+        // for (let i=1; i<images.length; i++){
+        //     images.splice(0,1);
+        //     images.push(i);
+        //     document.querySelector('.slider').innerHTML ='';
+
+        //     images.forEach(item => {
+        //         let slideImg = document.createElement('img');
+        //         slideImg.setAttribute('src', `img/build${item}.jpg`);
+        //         document.querySelector('.slider').appendChild(slideImg);
+        //     })
+        //     console.log(images);
+            
+        // }    
+    // } 
+
+    
+// })
+
 
 
 // PEOPLE SEARCH DROPDOWN
-
 document.querySelector('.search-drop').addEventListener('click', () => {
     if (document.querySelector('.search-card').style.display !== 'none'){
         document.querySelector('.search-card').style.display = 'none';
@@ -229,3 +266,18 @@ document.querySelector('.search-drop').addEventListener('click', () => {
     }
     
 })
+
+
+// FILL GOOOOOGLE SPANS
+for (let i=1; i<=10; i++){
+    let span = document.createElement('span');
+    span.style.padding = '0 0.4rem';
+    span.style.cursor = "pointer"
+    document.querySelector('.google-numb').appendChild(span).innerHTML = i;
+}
+
+let next = document.createElement('span');
+next.innerHTML = 'Next';
+next.style.marginLeft = '2rem';
+next.style.cursor = "pointer";
+document.querySelector('.google-numb').appendChild(next);

@@ -314,6 +314,7 @@ h5 {
 
 .build-image {
   border-bottom: 2px solid rgb(226, 222, 222);
+  width: 100%;
 }
 
 .build-image li {
@@ -328,12 +329,29 @@ h5 {
 }
 
 .build-image img {
-  width: 7rem;
-  height: 8rem;
+  width: 10rem;
+  height: 9rem;
 }
 
 .build-image a:last-child:hover {
   text-decoration: none;
+}
+
+.build-image .slider {
+  height: 8rem;
+  display: flex;
+  overflow: hidden;
+}
+
+#slider-svg {
+  position: absolute;
+  left: 57.5%;
+  top: 286%;
+  border: 2px solid rgba(32, 33, 36, 0.28);
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  border-radius: 50%;
+  background-color: rgba(255, 249, 249, 0.75);
+  padding: 0.4rem;
 }
 
 /******** ALSO SEARCH *********/
