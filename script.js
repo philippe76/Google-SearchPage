@@ -197,7 +197,7 @@ for (let i=0; i<result_content.length; i++) {
 }
 
 
-// IMAGES SLIDER
+// SLIDER BUTTON
 document.querySelector('#slider-svg').addEventListener('mouseover', ()=> {
     document.querySelector('#slider-svg > path').style.fill = "black"
 })
@@ -206,48 +206,30 @@ document.querySelector('#slider-svg').addEventListener('mouseout', ()=> {
     document.querySelector('#slider-svg > path').style.fill = "#70757a"
 })
 
-
+// SLIDER FUNCTIONS
 let images = [1,2,3,4,5,6,7]
 
-images.forEach(item => {
-    let slideImg = document.createElement('img');
-    slideImg.setAttribute('src', `img/build${item}.jpg`);
-    document.querySelector('.slider').appendChild(slideImg);
+const addImg = () => {
+    images.forEach(item => {
+        let slideImg = document.createElement('img');
+        slideImg.setAttribute('src', `img/build${item}.jpg`);
+        document.querySelector('.slider').appendChild(slideImg);
+    })
+}
+
+const slideArr = () => {
+    let first = images[0]
+    images.splice(0,1);
+    images.push(first);
+}
+
+addImg()
+
+document.querySelector('#slider-svg').addEventListener('click', ()=> {
+        document.querySelector('.slider').innerHTML = '';
+        slideArr();
+        addImg();  
 })
-
-// document.querySelector('#slider-svg').addEventListener('click', ()=> {
-    // console.log(images[0]);
-    // if (images[0] === 1){
-    //     document.querySelector('.slider').innerHTML ='';
-    //     for (let i=1; i<images.length; i++){
-    //         images.splice(0,1);
-    //         images.push(i);
-    //         images.forEach(item => {
-    //             let slideImg = document.createElement('img');
-    //             slideImg.setAttribute('src', `img/build${item}.jpg`);
-    //             document.querySelector('.slider').appendChild(slideImg);
-    //         })
-    //         console.log(images);
-    //     }    
-    // }   
-    // else {
-        // for (let i=1; i<images.length; i++){
-        //     images.splice(0,1);
-        //     images.push(i);
-        //     document.querySelector('.slider').innerHTML ='';
-
-        //     images.forEach(item => {
-        //         let slideImg = document.createElement('img');
-        //         slideImg.setAttribute('src', `img/build${item}.jpg`);
-        //         document.querySelector('.slider').appendChild(slideImg);
-        //     })
-        //     console.log(images);
-            
-        // }    
-    // } 
-
-    
-// })
 
 
 
