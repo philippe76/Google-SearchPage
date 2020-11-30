@@ -315,6 +315,7 @@ h5 {
 .build-image {
   border-bottom: 2px solid rgb(226, 222, 222);
   width: 100%;
+  position: relative;
 }
 
 .build-image li {
@@ -343,15 +344,21 @@ h5 {
   overflow: hidden;
 }
 
-#slider-svg {
+.slider-svg:last-child {
+  left: -4%;
+  transform: scale3d(-1, 1, 1);
+}
+
+.slider-svg {
   position: absolute;
-  left: 57.5%;
-  top: 242%;
+  top: 56%;
+  left: 96%;
   border: 2px solid rgba(32, 33, 36, 0.28);
   box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
   border-radius: 50%;
   background-color: rgba(255, 249, 249, 0.75);
   padding: 0.4rem;
+  transform: scale3d(-1, 1, 1);
 }
 
 /******** ALSO SEARCH *********/

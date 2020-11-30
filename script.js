@@ -29,6 +29,7 @@ const svgColor= [
     '#5f6368',
     '#1a0dab',
     '#70757a',
+    '#70757a',
     '#1a0dab',
     '#70757a',
     '#1a0dab'
@@ -197,14 +198,19 @@ for (let i=0; i<result_content.length; i++) {
 }
 
 
-// SLIDER BUTTON
-document.querySelector('#slider-svg').addEventListener('mouseover', ()=> {
-    document.querySelector('#slider-svg > path').style.fill = "black"
+// SLIDER BUTTONS
+document.querySelectorAll('.slider-svg').forEach(item => {
+    item.addEventListener('mouseover', ()=> {
+        document.querySelectorAll('.slider-svg > path')[0].style.fill = "black";
+        document.querySelectorAll('.slider-svg > path')[1].style.fill = "black";
+    })
+    item.addEventListener('mouseout', ()=> {
+        document.querySelectorAll('.slider-svg > path')[0].style.fill = "#70757a";
+        document.querySelectorAll('.slider-svg > path')[1].style.fill = "#70757a";
+    })  
 })
 
-document.querySelector('#slider-svg').addEventListener('mouseout', ()=> {
-    document.querySelector('#slider-svg > path').style.fill = "#70757a"
-})
+
 
 // SLIDER FUNCTIONS
 let images = [1,2,3,4,5,6,7]
@@ -214,21 +220,34 @@ const addImg = () => {
         let slideImg = document.createElement('img');
         slideImg.setAttribute('src', `img/build${item}.jpg`);
         document.querySelector('.slider').appendChild(slideImg);
+        // slideImg.animate( {duration: 5000})
     })
 }
 
-const slideArr = () => {
-    let first = images[0]
+const slideArrRight = () => {
+    let first = images[0];
     images.splice(0,1);
     images.push(first);
 }
 
+const slideArrLeft = () => {
+    let last = images[images.length-1];
+    images.splice(images.length-1,1);
+    imafes.pop(last)    ;
+}
+
 addImg()
 
-document.querySelector('#slider-svg').addEventListener('click', ()=> {
+document.querySelector('#slideRight').addEventListener('click', ()=> {
         document.querySelector('.slider').innerHTML = '';
-        slideArr();
-        addImg();  
+        slideArrRight();
+        addImg(); 
+})
+
+document.querySelector('#slideLeft').addEventListener('click', ()=> {
+        document.querySelector('.slider').innerHTML = '';
+        slideArrRight();
+        addImg(); 
 })
 
 
