@@ -182,7 +182,6 @@ const addImg = () => {
         let slideImg = document.createElement('img');
         slideImg.setAttribute('src', `img/build${item}.jpg`);
         document.querySelector('.slider').appendChild(slideImg);
-        // slideImg.animate( {duration: 5000})
     })
 }
 
@@ -199,6 +198,8 @@ const slideArrRight = () => {
 }
 
 addImg()
+
+
 
 document.querySelector('#slideRight').addEventListener('click', ()=> {
         document.querySelector('.slider').innerHTML = '';
