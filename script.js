@@ -1,5 +1,5 @@
 
-// import datas from modules
+// IMPORT DATA FROM MODULES
 import { svgColor } from './datas/svg-color.js'
 import { result_content } from './datas/result-content.js';
 import { people_ask } from './datas/people-ask.js'
@@ -124,23 +124,23 @@ for (let i=0; i<result_content.length; i++) {
 let data_title = [...document.querySelectorAll('.ask-data h2')];
 let data_list = [...document.querySelectorAll('.ask-data ol')];
 let data_date = [...document.querySelectorAll('.ask-data time')];
+let data_para = [...document.querySelectorAll('.ask-data p')]
 let data_sub = [...document.querySelectorAll('.ask-data h5')];
 let data_link = [...document.querySelectorAll('.ask-data a')];
-let data_search = [...document.querySelectorAll('.ask-data p')];
+let data_search = [...document.querySelectorAll('.ask-data h3')];
 
 for (let i=0; i<people_ask.length; i++) {
     data_title[i].innerHTML = people_ask[i].title;
     people_ask[i].list.forEach(item=> {
         data_list[i].innerHTML += `<li>${item}</li>`
     });
-    data_date[i].setAttribute('datetime', people_ask[i].date); 
     data_date[i].innerHTML = people_ask[i].date;
+    data_para[i].innerHTML = people_ask[i].para;
     data_sub[i].innerHTML = people_ask[i].sub; 
     data_link[i].setAttribute('href', people_ask[i].href);
-    data_link[i].innerHTML = people_ask[i].link;
-    data_search[i].innerHTML = people_ask[i].search;
+    data_link[i].innerHTML = `<h4>${people_ask[i].link}</h4>`;
+    data_search[i].innerHTML = `Search for: <span>${people_ask[i].search}</span>`;
 }
-
 
 
 // FUNCTION PEOPLE ASK DROPDOWN 
@@ -151,15 +151,14 @@ for (let i=0; i<askDiv.length; i++){
     askDiv[i].addEventListener('click', () => {
         if (dataDiv[i].style.display != 'block'){
             dataDiv[i].style.display = 'block'
+            document.querySelectorAll('.ask-drop svg')[i].style.transform= 'scale3d(1, -1, 1)'
         }
         else {
             dataDiv[i].style.display = 'none'
-        }
-        
+            document.querySelectorAll('.ask-drop svg')[i].style.transform= 'scale3d(1, 1, 1)'
+        }        
     })
 }
-
-
 
 
 // SLIDER BUTTONS

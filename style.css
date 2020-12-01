@@ -298,7 +298,7 @@ h5 {
   cursor: pointer;
 }
 
-.people-ask h3,
+.people-ask > h3,
 .ask-title {
   color: rgba(0, 0, 0, 0.87);
   padding: 1rem;
@@ -316,6 +316,41 @@ h5 {
 
 .ask-data {
   display: none;
+}
+
+.ask-data h2 {
+  font-size: 1.25rem;
+}
+
+.ask-data li {
+  font-size: 1.2rem;
+}
+
+.ask-data time {
+  padding-left: 2rem;
+  color: #70757a;
+  font-size: 0.8rem;
+}
+
+.ask-data h5 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.ask-data h4 {
+  color: #1a0dab;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.ask-data h3 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.2rem;
+}
+
+.ask-data span {
+  color: #1a0dab;
 }
 
 /******** BUILD IMAGES *********/
