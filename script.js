@@ -150,16 +150,16 @@ const addImg = () => {
     })
 }
 
-const slideArrRight = () => {
+const slideArrLeft = () => {
     let first = images[0];
     images.splice(0,1);
     images.push(first);
 }
 
-const slideArrLeft = () => {
+const slideArrRight = () => {
     let last = images[images.length-1];
     images.splice(images.length-1,1);
-    imafes.pop(last)    ;
+    images.unshift(last);
 }
 
 addImg()
@@ -172,7 +172,7 @@ document.querySelector('#slideRight').addEventListener('click', ()=> {
 
 document.querySelector('#slideLeft').addEventListener('click', ()=> {
         document.querySelector('.slider').innerHTML = '';
-        slideArrRight();
+        slideArrLeft();
         addImg(); 
 })
 
