@@ -120,7 +120,44 @@ for (let i=0; i<result_content.length; i++) {
 }
 
 
-// FILL PEOPLE ASK DROPDOWN 
+// FILL HTML PEOPLE ASK DROPDOWN
+let data_title = [...document.querySelectorAll('.ask-data h2')];
+let data_list = [...document.querySelectorAll('.ask-data ol')];
+let data_date = [...document.querySelectorAll('.ask-data time')];
+let data_sub = [...document.querySelectorAll('.ask-data h5')];
+let data_link = [...document.querySelectorAll('.ask-data a')];
+let data_search = [...document.querySelectorAll('.ask-data p')];
+
+for (let i=0; i<people_ask.length; i++) {
+    data_title[i].innerHTML = people_ask[i].title;
+    people_ask[i].list.forEach(item=> {
+        data_list[i].innerHTML += `<li>${item}</li>`
+    });
+    data_date[i].setAttribute('datetime', people_ask[i].date); 
+    data_date[i].innerHTML = people_ask[i].date;
+    data_sub[i].innerHTML = people_ask[i].sub; 
+    data_link[i].setAttribute('href', people_ask[i].href);
+    data_link[i].innerHTML = people_ask[i].link;
+    data_search[i].innerHTML = people_ask[i].search;
+}
+
+
+
+// FUNCTION PEOPLE ASK DROPDOWN 
+let askDiv = [...document.querySelectorAll('.ask-title')];
+let dataDiv = [...document.querySelectorAll('.ask-data')];
+
+for (let i=0; i<askDiv.length; i++){
+    askDiv[i].addEventListener('click', () => {
+        if (dataDiv[i].style.display != 'block'){
+            dataDiv[i].style.display = 'block'
+        }
+        else {
+            dataDiv[i].style.display = 'none'
+        }
+        
+    })
+}
 
 
 

@@ -292,21 +292,30 @@ h5 {
   border-radius: 8px;
 }
 
-.people-ask div {
+.ask-title div:first-child {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .people-ask h3,
-.people-ask div {
+.ask-title {
   color: rgba(0, 0, 0, 0.87);
   padding: 1rem;
   border-bottom: 2px solid rgb(226, 222, 222);
 }
 
-.people-ask p {
+.ask-title:last-of-type {
+  border: none;
+}
+
+.ask-title p {
   font-size: 1.2rem;
   margin: 0;
+}
+
+.ask-data {
+  display: none;
 }
 
 /******** BUILD IMAGES *********/
