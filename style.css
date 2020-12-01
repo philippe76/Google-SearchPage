@@ -292,8 +292,13 @@ h5 {
   border-radius: 8px;
 }
 
+.people-ask div {
+  display: flex;
+  justify-content: space-between;
+}
+
 .people-ask h3,
-.people-ask p {
+.people-ask div {
   color: rgba(0, 0, 0, 0.87);
   padding: 1rem;
   border-bottom: 2px solid rgb(226, 222, 222);
@@ -323,6 +328,10 @@ h5 {
   border: solid 1px rgba(0, 0, 0, 0.1);
   padding: 0.7rem;
   margin: 0 0.2rem;
+}
+
+.build-image a:hover {
+  color: unset;
 }
 
 .build-image li:hover {
