@@ -16,4 +16,4 @@
 
 <br/>
 
-[<img src="img/capture.PNG"/>](https://philippe76.github.io/Google-SearchPage/)
+[<img src="img/capture.PNG"/>](https://philippe76.github.io/Google-SearchPage/?target=_blank)
